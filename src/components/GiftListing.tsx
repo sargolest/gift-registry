@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Share, Gift } from 'lucide-react';
 
 const GiftListing = () => {
-  // Added underscore to setGifts to indicate it's intentionally unused
-  const [gifts, _setGifts] = useState([
+  // Changed to use just the gifts array without the setter since we're not modifying it
+  const gifts = [
     { id: 1, name: 'ست قهوه خوری', price: '۲,۵۰۰,۰۰۰ تومان', reserved: false },
     { id: 2, name: 'ماشین لباسشویی', price: '۲۵,۰۰۰,۰۰۰ تومان', reserved: false },
     { id: 3, name: 'سرویس قابلمه', price: '۵,۰۰۰,۰۰۰ تومان', reserved: true }
-  ]);
+  ];
 
   const handleShare = () => {
     if (navigator.share) {
