@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';  // We only need React now
 import { Share, Gift } from 'lucide-react';
 
 const GiftListing = () => {
-  // Changed to use just the gifts array without the setter since we're not modifying it
+  // Simple array instead of state
   const gifts = [
     { id: 1, name: 'ست قهوه خوری', price: '۲,۵۰۰,۰۰۰ تومان', reserved: false },
     { id: 2, name: 'ماشین لباسشویی', price: '۲۵,۰۰۰,۰۰۰ تومان', reserved: false },
@@ -21,6 +21,7 @@ const GiftListing = () => {
     }
   };
 
+  // Rest of your component stays exactly the same
   return (
     <div className="min-h-screen bg-gray-50 p-4">
       <div className="max-w-6xl mx-auto">
